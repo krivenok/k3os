@@ -23,7 +23,7 @@ golangci-lint run
 
 if [ -n "$DIRTY" ]; then
     echo Source dir is dirty
-    git status --porcelain --untracked-files=no
+    #git status --porcelain --untracked-files=no
     exit 1
 fi
 
