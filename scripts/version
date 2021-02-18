@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# Skip everything
 if [ -n "" ]; then
+
 if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
     DIRTY="-dirty"
 fi
@@ -25,6 +27,7 @@ REPO=${REPO:-rancher}
 if echo $TAG | grep -q dirty; then
     TAG=dev
 fi
+
 fi
 
 TAG=poc
